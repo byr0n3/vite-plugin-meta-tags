@@ -1,5 +1,7 @@
 # Vite Plugin Meta Tags
 
+<img src="./logo.png" alt="Logo">
+
 [![npm webpage](https://img.shields.io/npm/v/vite-plugin-meta-tags?color=0c72cc)](https://www.npmjs.com/package/vite-plugin-meta-tags)
 [![package license](https://img.shields.io/github/license/byr0n3/vite-plugin-meta-tags)](https://github.com/byr0n3/vite-plugin-meta-tags/blob/master/LICENSE)
 [![npm bundle size](https://img.shields.io/bundlephobia/min/vite-plugin-meta-tags)](https://bundlephobia.com/package/vite-plugin-meta-tags)
