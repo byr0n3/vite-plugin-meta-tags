@@ -38,6 +38,7 @@ const GENERATORS: Record<TagType, (object | ((value: string) => HtmlTagDescripto
 	url: [{ property: 'og:url' }, { property: 'twitter:url' }, twitterDomain],
 	img: [{ property: 'og:image' }, twitterCardImg, { name: 'twitter:image' }],
 	color: [{ name: 'theme-color' }, { name: 'msapplication-TileColor' }],
+	google: [{ name: 'google-site-verification' }],
 };
 
 export function* tagsGenerator(meta: MetaConfig): Generator<HtmlTagDescriptor, void> {
