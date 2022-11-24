@@ -1,0 +1,38 @@
+{
+  "name": "vite-plugin-meta-tags",
+  "description": "A Vite plug-in to automatically inject meta tags into your index.html",
+  "version": "0.1.0",
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "meta-tags",
+    "meta"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "sideEffects": false,
+  "author": {
+    "name": "Byrone",
+    "url": "https://github.com/byr0n3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/byr0n3/vite-plugin-meta-tags"
+  },
+  "bugs": "https://github.com/byr0n3/vite-plugin-meta-tags/issues",
+  "devDependencies": {
+    "typescript": "beta",
+    "vite": "^3.2.4"
+  },
+  "peerDependencies": {
+    "vite": ">=3.0.0"
+  }
+}
