@@ -60,3 +60,8 @@ export default defineConfig(function ({ mode }) {
 
 ## Planned features
 - [ ] Custom tags
+
+## FaQ
+
+### When I import the plugin and build I get a 'change to a dynamic import()' error
+Add `"type": "module"` to your `package.json`.
