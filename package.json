@@ -9,7 +9,8 @@
     "meta"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "yarn build && cp -rf dist ../portfolio2/node_modules/vite-plugin-meta-tags"
   },
   "license": "MIT",
   "type": "module",
