@@ -31,7 +31,7 @@
 	"bugs": "https://github.com/byr0n3/vite-plugin-meta-tags/issues",
 	"devDependencies": {
 		"typescript": "beta",
-		"vite": "^3.2.4"
+		"vite": "^4.1.4"
 	},
 	"peerDependencies": {
 		"vite": ">=3.0.0"
