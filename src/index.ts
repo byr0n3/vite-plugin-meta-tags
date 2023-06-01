@@ -17,10 +17,10 @@ export function meta(meta: MetaConfig, custom?: (() => HtmlTagDescriptor[]) | Ht
 				}
 
 				if (typeof custom === 'function') {
-					return [...tags, ...custom()];
+					return [...custom(), ...tags];
 				}
 
-				return [...tags, ...custom];
+				return [...custom, ...tags];
 			},
 		},
 	};

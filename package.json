@@ -1,7 +1,7 @@
 {
 	"name": "vite-plugin-meta-tags",
 	"description": "A Vite plug-in to automatically inject meta tags into your index.html",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"keywords": [
 		"vite",
 		"vite-plugin",
@@ -9,8 +9,7 @@
 		"meta"
 	],
 	"scripts": {
-		"build": "tsc",
-		"dev": "yarn build && cp -rf dist ../portfolio2/node_modules/vite-plugin-meta-tags"
+		"build": "tsc"
 	},
 	"license": "MIT",
 	"type": "module",
