@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.3
+
+- Configurable `injectTo` prop
+
 ## v0.1.2
 
 - Updated the `tags` order so custom tags will be appended **first**
