@@ -1,16 +1,14 @@
 import type { HtmlTagDescriptor, Plugin } from 'vite';
-import type { MetaConfig } from './interface';
+import type { InjectTo, MetaConfig } from './interface';
 import { tagsGenerator } from './generator.js';
 
-export type { MetaConfig };
-
-export function meta(meta: MetaConfig, custom?: (() => HtmlTagDescriptor[]) | HtmlTagDescriptor[] | undefined): Plugin {
+export function meta(meta: MetaConfig, injectTo: InjectTo = 'head-prepend', custom?: (() => HtmlTagDescriptor[]) | HtmlTagDescriptor[] | undefined): Plugin {
 	return {
 		name: 'vite:meta-tags',
 		transformIndexHtml: {
 			enforce: 'post',
 			transform: function () {
-				const tags = Array.from(tagsGenerator(meta));
+				const tags = Array.from(tagsGenerator(meta, injectTo));
 
 				if (!custom) {
 					return tags;
@@ -25,3 +23,5 @@ export function meta(meta: MetaConfig, custom?: (() => HtmlTagDescriptor[]) | Ht
 		},
 	};
 }
+
+export type { MetaConfig, InjectTo };

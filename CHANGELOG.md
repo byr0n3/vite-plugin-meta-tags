@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.1.2
+
+- Updated the `tags` order so custom tags will be appended first
+
 ## v0.1.1
 
 - Basic support for custom tags

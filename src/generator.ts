@@ -1,9 +1,5 @@
-import type { MetaConfig, TagType } from './interface';
+import type { MetaConfig, TagType, InjectTo } from './interface';
 import type { HtmlTagDescriptor } from 'vite';
-
-function getDomain(url: string) {
-	return new URL(url).hostname;
-}
 
 function title(value: string) {
 	return {
@@ -17,7 +13,7 @@ function twitterDomain(value: string) {
 		tag: 'meta',
 		attrs: {
 			property: 'twitter:domain',
-			content: getDomain(value),
+			content: new URL(value).hostname,
 		},
 	};
 }
@@ -41,7 +37,7 @@ const GENERATORS: Record<TagType, (object | ((value: string) => HtmlTagDescripto
 	google: [{ name: 'google-site-verification' }],
 };
 
-export function* tagsGenerator(meta: MetaConfig): Generator<HtmlTagDescriptor, void> {
+export function* tagsGenerator(meta: MetaConfig, injectTo: InjectTo): Generator<HtmlTagDescriptor, void> {
 	for (const [key, $value] of Object.entries(meta)) {
 		if ($value == null) {
 			continue;
@@ -55,7 +51,10 @@ export function* tagsGenerator(meta: MetaConfig): Generator<HtmlTagDescriptor, v
 
 		for (const generator of generators) {
 			if (typeof generator === 'function') {
-				yield generator(value);
+				yield {
+					...generator(value),
+					injectTo,
+				};
 			} else {
 				yield {
 					tag: 'meta',
@@ -63,6 +62,7 @@ export function* tagsGenerator(meta: MetaConfig): Generator<HtmlTagDescriptor, v
 						...generator,
 						content: value,
 					},
+					injectTo,
 				};
 			}
 		}
