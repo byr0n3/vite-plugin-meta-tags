@@ -1,5 +1,8 @@
 # Changelog
 
+## v0.1.4
+- Fix warnings about deprecated `enfore` and `transform` options ([#15](https://github.com/byr0n3/vite-plugin-meta-tags/issues/15))
+
 ## v0.1.3
 
 - Configurable `injectTo` prop
