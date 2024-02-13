@@ -6,8 +6,8 @@ export function meta(meta: MetaConfig, injectTo: InjectTo = 'head-prepend', cust
 	return {
 		name: 'vite:meta-tags',
 		transformIndexHtml: {
-			enforce: 'post',
-			transform: function () {
+			order: 'post',
+			handler: function () {
 				const tags = Array.from(tagsGenerator(meta, injectTo));
 
 				if (!custom) {

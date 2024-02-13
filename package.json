@@ -1,7 +1,7 @@
 {
 	"name": "vite-plugin-meta-tags",
 	"description": "A Vite plug-in to automatically inject meta tags into your index.html",
-	"version": "0.1.3",
+	"version": "0.1.4",
 	"keywords": [
 		"vite",
 		"vite-plugin",
